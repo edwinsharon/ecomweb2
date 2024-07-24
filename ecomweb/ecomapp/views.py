@@ -233,25 +233,50 @@ def delete_g(request,pk):
     return redirect("sellerindex")
 
 
-def edit_g(request,pk):
-     if request.method =="POST":
+
+
+def edit_g(request, pk):
+    if request.method == "POST":
         productname = request.POST.get("productname")
         prize = request.POST.get("prize")
         offer = request.POST.get("offer")
         speed = request.POST.get("speed")
         color = request.POST.get("color")
         description = request.POST.get("description")
-        category = request.POST.get("category")  
+        category_id = request.POST.get("category")
         image = request.FILES.get("image")
-        seller = request.user
-        category_instance = get_object_or_404(Categories, pk=category)
-        probj.category = category_instance
-        probj = product(productname=productname, prize=prize, offer=offer, speed=speed, color=color, description=description, seller=seller, image=image) 
-        probj.objects.filter(pk=pk).update()
-        return redirect('sellerindex')
-     else:            
-          data=product.objects.get(pk=pk)
-          return render(request,'editpro.html',{'data':data})
+        if not productname or not prize or not offer or not speed or not color or not description or not category_id or not image:
+            return redirect('sellerindex')
+        else:
+            probj = product.objects.get(pk=pk)
+        
+        
+            probj.productname = productname
+            probj.prize = prize
+            probj.offer = offer
+            probj.speed = speed
+            probj.color = color
+            probj.description = description
+        
+        
+            category = Categories.objects.get(pk=category_id)
+            probj.category = category
+        
+        
+            if image:
+                probj.image = image
+        
+       
+            probj.save()
+        
+            return redirect('sellerindex')
+    
+    else:
+        # Handle GET request to fetch the product for editing
+        data = product.objects.get(pk=pk)
+        categories = Categories.objects.all()
+        return render(request, 'editpro.html', {'data': data, 'categories': categories})
+
       
       
 def productsdisplay(request,pk):

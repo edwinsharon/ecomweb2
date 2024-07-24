@@ -40,10 +40,9 @@
 </div>
 <div class="mt-3">
     <select name="category" id="category">
-        <option value="3wheeler">3wheeler</option>
-        <option value="kids">kids</option>
-        <option value="teen">teen</option>
-        <option value="adult">adult</option>
+        {% for category in categories %}
+        <option value="{{ category.id }}">{{ category.category }}</option>
+        {% endfor %}
     </select>
 </div>
 <div>

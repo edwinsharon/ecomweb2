@@ -1,0 +1,21 @@
+def edit_g(request,pk):
+     if request.method =="POST":
+        productname = request.POST.get("productname")
+        prize = request.POST.get("prize")
+        offer = request.POST.get("offer")
+        speed = request.POST.get("speed")
+        color = request.POST.get("color")
+        description = request.POST.get("description")
+        category = request.POST.get("category")  
+        image = request.FILES.get("image")
+        seller = request.user
+        cat=Categories.objects.get(pk=category)
+        # category_instance = get_object_or_404(Categories, pk=category)
+        # probj.category = category_instance
+        probj = product(productname=productname, prize=prize, offer=offer, speed=speed, color=color, description=description, seller=seller, image=image,category=cat) 
+        probj.objects.filter(pk=pk).update()
+        return redirect('sellerindex')
+     else:            
+          data=product.objects.get(pk=pk)
+          categories = Categories.objects.all()
+          return render(request,'editpro.html',{'data':data,"categories":categories})
