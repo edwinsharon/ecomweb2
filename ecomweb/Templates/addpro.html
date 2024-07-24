@@ -16,11 +16,38 @@
     input[type="checkbox"]:checked + .cat {
         display: block;
     }
+
+.button1 {
+    background-image: linear-gradient(to right, #E040FB, #00BCD4);
+  border: none;
+  color: black;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+}
+.button2 {
+background-image: linear-gradient(90deg, #fa80d2, #fed757);
+  border: none;
+  color:black;
+  padding: 5px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+  cursor: pointer;
+ 
+}
     </style>
 </head>
 <body class="main">
     
-    <div class="d-flex justify-content-end">
+    <div class="d-flex justify-content-start">
         <a href="{% url 'sellerindex' %}"><button  class="btn btn-danger mb-3 mt-3  me-2" >go back</button></a>
     </div>
     <div class="container  bg-light  d-flex justify-content-center w-50 mt-5 rounded" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;">
@@ -61,7 +88,7 @@
     <label for="image">image</label>
     <input type="file" id="image" name="image" class="mt-3">
 </div>
-   <a href="{% url 'addproduct' %}"><button class="btn btn-success mb-3 mt-3" >submit</button></a>
+   <a href="{% url 'addproduct' %}"><button class="button1 mb-3 mt-3" >submit</button></a>
    {% if messages %}
    <ul class="messages">
        {% for message in messages %}
@@ -79,7 +106,7 @@
 <form action="{% url 'addcategory' %}" method="post" class=" col-2 w-25 p-3 mt-4 ">
     {% csrf_token %}
 <input type="text"  height="2px" name="category" placeholder="add category" class="w-50 mt-1">
-<input type="submit" value="Add" class="btn btn-success">
+<input type="submit" value="Add" class="button1">
 {% if messages %}
 <ul class="messages">
 {% for message in messages %}
@@ -92,12 +119,12 @@
 
 <div class="row mt-3">
     <div class="col-5"></div>
-    <div class="col-2 btn btn-primary"><label for="toggle-section">categories</label><input type="checkbox" id="toggle-section">
+    <div class="col-2 button1"><label for="toggle-section">categories</label><input type="checkbox" id="toggle-section">
     <div class="row cat">
         {% for category in categories %}
-     <div class="btn btn-primary mt-2 w-25 ms-2">
+     <div class="button1 mt-4 w-25 ms-2">
             <span>{{ category.category }}</span>
-            <a href="{% url 'deletecat' category.pk %}"  class="btn btn-danger"><i class="bi bi-trash3"></i></a>
+            <a href="{% url 'deletecat' category.pk %}"  class="button2"><i class="bi bi-trash3"></i></a>
      </div>
       {% endfor %}
     </div>
