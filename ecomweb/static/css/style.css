@@ -1,0 +1,467 @@
+.products a{
+    text-decoration: none;
+    color:black;
+}
+.cardimage{
+    height: 300px;
+    width: 260px;
+    object-fit: contain;
+}
+.navitem a{
+text-decoration: none;
+color: white;
+}
+@media only screen and (max-width: 1399.8px) and (min-width:1200px){ 
+    .head{
+        height:55px;
+       display: grid;
+       grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    .head a{
+        
+        text-decoration: none;
+       color: white;
+    }
+    .left_main{
+        display: flex;
+    }
+    .menu_main{
+        flex-direction: column;
+        justify-content: end;
+    }
+    .head2{
+        display: none;
+    }
+    .logotext{
+        display:block;
+    }
+    .head a:hover{
+        color: goldenrod;
+    }
+    .main{
+        background-image: url(../images/indexbanner2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 500px;
+        width: 100%;
+       
+    }
+    .BTN1{
+       margin-left: 40%;
+       margin-top: 20%;
+    }
+    .main button:hover{
+        color: goldenrod;
+        
+    }
+    .products{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        text-decoration: none;
+    }
+    .footermenu a{
+        text-decoration: none;
+        color: white;
+    }
+    .details{
+        background-image: url(../images/indexbanner1.jpg);
+        height: 500px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    
+    }
+    .aboutdetails{
+        color: goldenrod;
+    }
+    .aboutdetails h5:hover{
+     color: chocolate;
+    }
+    .aboutdetails2{
+        display: none;
+    }
+    }
+
+
+    @media only screen and (min-width: 1400px) { 
+        .head{
+            height:55px;
+           display: grid;
+           grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
+        }
+   
+        .left_main{
+            display: flex;
+        }
+        .menu_main{
+            flex-direction: column;
+            justify-content: end;
+        }
+        .head2{
+            display: none;
+        }
+        .logotext{
+            display:block;
+        }
+        .head a:hover{
+            color: goldenrod;
+        }
+        .main{
+            background-image: url(../images/indexbanner2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 500px;
+            width: 100%;
+           
+        }
+        .BTN1{
+           margin-left: 40%;
+           margin-top: 20%;
+        }
+        .main button:hover{
+            color: goldenrod;
+            
+        }
+        .products{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            text-decoration: none;
+        }
+        .footermenu a{
+            text-decoration: none;
+            color: white;
+        }
+        .details{
+            background-image: url(../images/indexbanner1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+        .aboutdetails{
+            color: goldenrod;
+        }
+        .aboutdetails h5:hover{
+         color: chocolate;
+        }
+        .aboutdetails2{
+            display: none;
+        }
+        }
+    
+    @media only screen and (max-width: 576px){ 
+        .logotext{
+           
+            text-align: center;
+        }
+        .head{
+            height:55px;
+            display: none;
+           
+        }
+        .head a{
+            display: none;
+            text-decoration: none;
+           color: white;
+        }
+        .head a:hover{
+            color: goldenrod;
+        }
+        .main{
+            background-image: url(../images/indexbanner2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+            width: 100%;
+           
+        }
+        .BTN1{
+           margin-left: 40%;
+           margin-top: 25%;
+        }
+        .main button:hover{
+            color: goldenrod;
+            
+        }
+        .products{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-decoration: none;
+        }
+        .footermenu a{
+            text-decoration: none;
+            color: white;
+        }
+        .details{
+            background-image: url(../images/indexbanner1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+        }
+        .details2{
+            background-image: url(../images/res1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .aboutdetails{
+            color: goldenrod;
+            display: none;
+        }
+        .aboutdetails2{
+            color: rgb(14, 13, 13);
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        .aboutdetails h5:hover{
+         color: chocolate;
+        }
+        .aboutdetails2 h5:hover{
+            color: chocolate;
+           }
+     }
+    
+    @media only screen and (max-width: 767.8px) and (min-width: 576px){ 
+        .logotext{
+           
+            text-align: center;
+        }
+        .head{
+            height:55px;
+            display: none;
+           
+        }
+        .head a{
+            display: none;
+            text-decoration: none;
+           color: white;
+        }
+        .head a:hover{
+            color: goldenrod;
+        }
+        .main{
+            background-image: url(../images/indexbanner2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+            width: 100%;
+           
+        }
+        .BTN1{
+           margin-left: 40%;
+           margin-top: 25%;
+        }
+        .main button:hover{
+            color: goldenrod;
+            
+        }
+        .products{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            text-decoration: none;
+        }
+        .footermenu a{
+            text-decoration: none;
+            color: white;
+        }
+        .details{
+            background-image: url(../images/indexbanner1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: none;
+        }
+        .details2{
+            background-image: url(../images/res1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .aboutdetails{
+            color: goldenrod;
+            display: none;
+        }
+        .aboutdetails2{
+            color: rgb(7, 7, 7);
+            margin-top: 40px;
+            margin-left: 20px;
+        }
+        .aboutdetails h5:hover{
+         color: chocolate;
+        }
+        .aboutdetails2 h5:hover{
+            color: chocolate;
+           }
+    
+    }
+    @media only screen and (max-width: 991.8px) and (min-width:768px) { 
+        .logotext{
+           
+            text-align: center;
+        }
+        .head{
+            height:55px;
+            display: none;
+           
+        }
+        .head a{
+            display: none;
+            text-decoration: none;
+           color: white;
+        }
+        
+        .head a:hover{
+            color: goldenrod;
+        }
+        .main{
+            background-image: url(../images/indexbanner2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+            width: 100%;
+           
+        }
+        .BTN1{
+           margin-left: 40%;
+           margin-top: 15%;
+        }
+        .main button:hover{
+            color: goldenrod;
+            
+        }
+        .products{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+         
+            text-decoration: none;
+        }
+        .footermenu a{
+            text-decoration: none;
+            color: white;
+        }
+        .details{
+            background-image: url(../images/indexbanner1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+            display: block;
+        }
+        .details2{
+            background-image: url(../images/res1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: none;
+        }
+        .aboutdetails{
+            color: goldenrod;
+            display: none;
+        }
+        .aboutdetails2{
+            color: rgb(7, 7, 7);
+            margin-top: 50px;
+            margin-left: 20px;
+        }
+        .aboutdetails h5:hover{
+         color: chocolate;
+        }
+        .aboutdetails2 h5:hover{
+            color: chocolate;
+           }
+    
+    }
+    
+    
+    @media only screen and (max-width: 1199.8px) and 
+    (min-width:992px) {
+        .logotext{
+           
+            text-align: center;
+        }
+        .head{
+            height:55px;
+            display: none;
+           
+        }
+        .head a{
+            display: none;
+            text-decoration: none;
+           color: white;
+        }
+        
+        .head a:hover{
+            color: goldenrod;
+        }
+        .main{
+            background-image: url(../images/indexbanner2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+            width: 100%;
+           
+        }
+        .BTN1{
+           margin-left: 40%;
+           margin-top: 12%;
+        }
+        .main button:hover{
+            color: goldenrod;
+            
+        }
+        .products{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr ;
+          
+            
+        }
+        .footermenu a{
+            text-decoration: none;
+            color: white;
+        }
+        .details{
+            background-image: url(../images/indexbanner1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+           
+            display: none;
+        }
+        .details2{
+            background-image: url(../images/indexbanner1.jpg);
+            height: 500px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            display: block;
+            
+        }
+        .aboutdetails{
+            color: goldenrod;
+            display: block;
+        }
+        .aboutdetails2{
+            color: rgb(7, 7, 7);
+            margin-top: 50px;
+            margin-left: 20px;
+            display: none;
+        }
+        .aboutdetails h5:hover{
+         color: chocolate;
+        }
+        .aboutdetails2 h5:hover{
+            color: chocolate;
+           }
+     }
+    
+    
+    
+    
+    
+    
+    
+    

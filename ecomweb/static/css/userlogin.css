@@ -1,0 +1,13 @@
+body{
+background-image: url( ../images/userbackground.jpg );
+background-repeat: no-repeat;
+background-size: cover;
+
+width: 100%;
+}
+.loginicon{
+    border-radius: 52%;
+    height: 250px;
+    width: 250px;
+    margin-left: 3%;
+}

@@ -1,0 +1,15 @@
+body{
+    background-image: url( ../images/anyback.avif );
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    }
+    .image{
+        height:25%;
+        width: 50%;
+        border: 2px black solid;
+    }
+    .category1{
+        height: 40px;
+    }
