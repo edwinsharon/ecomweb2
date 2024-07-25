@@ -1,63 +1,31 @@
+.nav1 a{
+text-decoration: none;
+color: white;
 
+
+}
+.nav1{
+    background-color: rgb(218, 210, 200);
+}
+.head{
+    height: 100px;
+    width: 100%;
+}
+.prod{
+    height: 120vh;
+    
+}
 .imag{
-    width:75%;
-    height:85%;
-    margin-left: 10%;
+    width: 600px;
+    height: 600px;
     object-fit: contain;
 }
-/* .details{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-} */
-
-.head{
-    height:70px;
-   display: grid;
-   grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
-   background-color: black;
-   color: white;
+.prodname {
+    font-size:150px
 }
-.head a{
-    
-    text-decoration: none;
-   color: white;
-  
+.prodspeed{
+    font-size: 50px;
 }
-.left_main{
-    display: flex;
+.prodprize{
+    font-size: 25px;
 }
-.menu_main{
-    flex-direction: column;
-    justify-content: end;
-}
-.head2{
-    display: none;
-}
-.logotext{
-    display:block;
-}
-.head a:hover{
-    color: goldenrod;
-}
-
-.button{
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    
-    cursor: pointer;
-    margin-left: 25%;
-    margin-top: 5%;
-}
-.footer{
-    padding-bottom: 10%;
-}
-.footermenu div{
-    text-decoration: none;
-}
-
