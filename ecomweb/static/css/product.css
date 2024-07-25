@@ -21,11 +21,19 @@ color: white;
     object-fit: contain;
 }
 .prodname {
-    font-size:150px
+    font-size:150px;
+    color: rgb(218, 210, 200);
 }
 .prodspeed{
     font-size: 50px;
+    color: rgb(218, 210, 200);
 }
 .prodprize{
-    font-size: 25px;
+    font-size: 35px;
+    color: rgb(218, 210, 200);
+}
+.detailsprod{
+    font-size: 20px;
+    color: rgb(218, 210, 200);
+    width: 400px;
 }
