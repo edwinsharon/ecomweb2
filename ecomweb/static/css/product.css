@@ -5,14 +5,14 @@ color: white;
 
 }
 .nav1{
-    background-color: rgb(218, 210, 200);
+    background-color:black;
 }
 .head{
     height: 100px;
     width: 100%;
 }
 .prod{
-    height: 120vh;
+    height: 100vh;
     
 }
 .imag{
@@ -22,18 +22,18 @@ color: white;
 }
 .prodname {
     font-size:150px;
-    color: rgb(218, 210, 200);
+    color: black;
 }
 .prodspeed{
     font-size: 50px;
-    color: rgb(218, 210, 200);
+    color:black;
 }
 .prodprize{
     font-size: 35px;
-    color: rgb(218, 210, 200);
+    color: black;
 }
 .detailsprod{
     font-size: 20px;
-    color: rgb(218, 210, 200);
+    color: black;
     width: 400px;
 }
