@@ -1,0 +1,1 @@
+<img src="{{ data.image.url }}" alt="product" class="w-75 mt-4" style="margin-left: 25%;">

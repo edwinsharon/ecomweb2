@@ -1,85 +1,11 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="{% static '/css/product.css/' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-<body class="prod">
+<body>
     
-    <div class="bg-dark row head text-light ">
-       <h1 class="col"><i>YULU CYCLES</i></h1>
-       <div class="col"></div>
-       <a href="" class="col">About</a>
-       <a href="" class="col ">Shop</a>
-       <a href="" class="col ">Contact</a>
-       <a href="" class="col ">Products</a>
-      
-    </div>
-    <div class="main">
-    <table>
-        <tr>
-            <td>
-        <img src="{{ data.image.url }}" alt="product" class="imag" >
-        <a href=""><button class="button" >buy now</button></a>
-            </td>  
-            <td>  
-        <div class="details">
-        <h1>{{ data.productname }}</h1>
-        <h4>PRIZE:{{ data.prize }}</h4>
-        <h4>OFFER:{{ data.offer }}</h4>
-        <h4>SPEED TYPE:{{ data.speed}}</h4>
-        <h4> COLOR:{{ data.color }}</h4>
-        <h4>CATEGORY:{{ data.category.category }}</h4>
-        
-        </div>
-        <pre> <h2>ABOUT THIS PRODUCT:</h2><h4>{{ data.description }}</h4></pre>
-         </td>
-        </tr>
-    </table>
-
-    </div>
-    <div class="footer bg-black text-light mt-3 ">
-        <div class="row pt-5 pb-5 ps-5 ">
-            <div class="col-4 mt-4">
-                <h1><i>YULU CYCLES</i></h1>
-            </div>
-            <div class="col-2 footermenu ">
-                <div>
-                   <span>About</span>
-
-                </div>
-                <div>
-                    <span>Shop</span>
-                </div>
-                <div>
-                    <span>Contact</span>
-                </div>
-                <div>
-                    <span>Products</span>
-                </div>
-                <div>
-                    <span>feedback</span> 
-                </div>
-                
-            </div>
-            <div class="col-2">
-                 <img src="{% static '/images/logo1.jpg' %}" alt="" class="w-50">
-            </div>
-            <div class="col-4 mt-5">
-                <i class="bi bi-facebook ms-3"></i>
-                <i class="bi bi-whatsapp ms-3"></i>
-                <i class="bi bi-instagram ms-3"></i>
-                <i class="bi bi-twitter-x ms-3"></i>
-                <i class="bi bi-pinterest ms-3"></i>
-            </div>
-        </div>
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

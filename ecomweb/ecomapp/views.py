@@ -245,32 +245,29 @@ def edit_g(request, pk):
         description = request.POST.get("description")
         category_id = request.POST.get("category")
         image = request.FILES.get("image")
-        if not productname or not prize or not offer or not speed or not color or not description or not category_id or not image:
-            return redirect('sellerindex')
-        else:
-            probj = product.objects.get(pk=pk)
+   
+        
+        probj = product.objects.get(pk=pk)
         
         
-            probj.productname = productname
-            probj.prize = prize
-            probj.offer = offer
+        probj.productname = productname
+        probj.prize = prize
+        probj.offer = offer
+        probj.color = color
+        probj.description = description
+        category = Categories.objects.get(pk=category_id)
+        probj.category = category
+        
+        if speed:
             probj.speed = speed
-            probj.color = color
-            probj.description = description
-        
-        
-            category = Categories.objects.get(pk=category_id)
-            probj.category = category
-        
-        
-            if image:
-                probj.image = image
+
+        if image:
+            probj.image = image
         
        
-            probj.save()
+        probj.save()
         
-            return redirect('sellerindex')
-    
+        return redirect('sellerindex')    
     else:
         # Handle GET request to fetch the product for editing
         data = product.objects.get(pk=pk)
