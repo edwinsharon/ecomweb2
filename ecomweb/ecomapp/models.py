@@ -20,3 +20,7 @@ class Verify(models.Model):
 class Categories(models.Model):
     category = models.CharField(max_length=50)
     seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name='categories')
+
+
+# class Order(models.Model):
+
