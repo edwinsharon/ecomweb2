@@ -36,7 +36,7 @@
             {% if user.is_authenticated %}
             <div class="col-1 mt-5"><a href="">About</a></div>
             <div class="col-1 mt-5"><a href="">Contact</a></div>
-            <div class="col-1 mt-5"><a href=""><i class="bi bi-cart"></i></a></div>
+            <div class="col-1 mt-5"><a href="{% url 'view_cart' %}"><i class="bi bi-cart"></i></a></div>
             <div class="col-1 text-light mt-5">{{ user.username | upper }}</div>
             {% else %}
             <div class="col-1 mt-5 text-black"></div>
@@ -60,7 +60,7 @@
                     <div class="prodprize"> Rs. {{ data.prize }}</div>
                     <div class="detailsprod">Explore the great outdoors with the {{ data.productname|upper }} Bicycle, a versatile choice designed for {{ data.category.category }}. This {{ data.speed }} bicycle comes in a stylish {{ data.color }} finish, combining functionality with a sleek aesthetic. Whether you're commuting through city streets or hitting the trails, its robust design ensures a smooth ride every time. Discover your next adventure with the YULU Bicycle, your trusted companion on two wheels.</div>
                     <a href="" class="button1 mt-4">buy Now</a>
-                    <a href="" class="button1 mt-2">Add to Cart</a>
+                    <a href="{% url 'add_to_cart' data.pk  %}" class="button1 mt-2">Add to Cart</a>
 
                 </div>
             </div>

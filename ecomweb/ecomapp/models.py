@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-class product(models.Model):
+class Product(models.Model):
     productname = models.CharField(max_length=100)
     prize = models.IntegerField()
     offer = models.CharField(max_length=50)
@@ -22,5 +22,13 @@ class Categories(models.Model):
     seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name='categories')
 
 
-# class Order(models.Model):
+
+class Cart(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+
+class CartItem(models.Model):
+    cart = models.ForeignKey(Cart, related_name='items', on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    
 

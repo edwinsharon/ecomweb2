@@ -9,6 +9,7 @@ from verify_email.email_handler import send_verification_email
 from django.conf import settings
 from django.core.mail import send_mail
 import random
+from django.urls import reverse
 
 # Create your views here.
 
@@ -18,12 +19,12 @@ def index(request):
     if request.method == 'POST':
         category_id = request.POST.get('category')
         if category_id == "all":
-            products = product.objects.all()
+            products = Product.objects.all()
         else:
-            products = product.objects.filter(category_id=category_id)
+            products = Product.objects.filter(category_id=category_id)
             return render(request, 'index.html', {'products': products, 'categories': categories})
     else:
-        products =product.objects.all()
+        products =Product.objects.all()
         
     return render(request, 'index.html', {'products': products, 'categories': categories})
 
@@ -71,7 +72,7 @@ def sellerlogin(request):
 
 def sellerindex(request):
     user = request.user
-    products = product.objects.filter(seller=user)
+    products = Product.objects.filter(seller=user)
     categories = Categories.objects.all() 
     context = {
         'products': products,
@@ -217,7 +218,7 @@ def addproduct(request):
         if not productname or not prize or not offer or not speed or not color or not description or not category_id or not image:
             messages.error(request, "All fields are required")
         else:
-            probj = product(productname=productname, prize=prize, offer=offer, speed=speed, color=color, description=description, category=category_instance, seller=seller, image=image)
+            probj = Product(productname=productname, prize=prize, offer=offer, speed=speed, color=color, description=description, category=category_instance, seller=seller, image=image)
             probj.save()
             messages.success(request, "Product added successfully")
             return redirect('addproduct')
@@ -228,7 +229,7 @@ def addproduct(request):
 
 
 def delete_g(request,pk):
-    prodobj=product.objects.get(pk=pk)
+    prodobj=Product.objects.get(pk=pk)
     prodobj.delete()
     return redirect("sellerindex")
 
@@ -247,7 +248,7 @@ def edit_g(request, pk):
         image = request.FILES.get("image")
    
         
-        probj = product.objects.get(pk=pk)
+        probj = Product.objects.get(pk=pk)
         
         
         probj.productname = productname
@@ -269,15 +270,14 @@ def edit_g(request, pk):
         
         return redirect('sellerindex')    
     else:
-        # Handle GET request to fetch the product for editing
-        data = product.objects.get(pk=pk)
+        data = Product.objects.get(pk=pk)
         categories = Categories.objects.all()
         return render(request, 'editpro.html', {'data': data, 'categories': categories})
 
       
       
 def productsdisplay(request,pk):
-    products = product.objects.get(pk=pk)
+    products = Product.objects.get(pk=pk)
     return render(request,'product.html',{'data': products})
 
 def addcategory(request):
@@ -295,11 +295,11 @@ def filtercategory(request):
     if request.method == 'POST':
         category_id = request.POST.get('category')
         if category_id == "all":
-            products = product.objects.all()
+            products = Product.objects.all()
         else:
-            products = product.objects.filter(category_id=category_id)
+            products = Product.objects.filter(category_id=category_id)
     else:
-        products =product.objects.all()
+        products =Product.objects.all()
         
     return render(request, 'sellerindex.html', {'products': products, 'categories': categories})
 
@@ -311,19 +311,33 @@ def deletecat(request,pk):
 
 def searchpro(request):
     categories = Categories.objects.all()
-    products =product.objects.all()
+    products =Product.objects.all()
     if request.POST:
         searchitem=request.POST.get("searchitem")
         if searchitem=="":
             return redirect('index')
         else:
-            products = product.objects.filter(productname=searchitem)
+            products = Product.objects.filter(productname=searchitem)
             return render(request,'index.html',{"products":products,'categories': categories})
     return redirect(request, 'index')
 
 
 
+def add_to_cart(request, pk):
+    product = get_object_or_404(Product, id=pk)
+    cart, created = Cart.objects.get_or_create(user=request.user)
+    CartItem.objects.get_or_create(cart=cart, product=product)
+    return redirect(reverse('productsdisplay', kwargs={'pk':product.pk}))
 
+
+def view_cart(request):
+    cart = Cart.objects.get_or_create(user=request.user)
+    return render(request, 'cart.html', {'cart': cart})
+
+def remove_from_cart(request, item_id):
+    cart_item = get_object_or_404(CartItem, id=item_id)
+    cart_item.delete()
+    return redirect('view_cart')
 
 
 

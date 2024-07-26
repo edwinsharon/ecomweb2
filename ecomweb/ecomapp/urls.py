@@ -22,6 +22,9 @@ urlpatterns = [
     path('filtercategory/',views.filtercategory,name="filtercategory"),
     path('deletecat/<int:pk>', views.deletecat, name='deletecat'),
     path('searchpro/',views.searchpro,name="searchpro"),
+    path('add/<int:pk>/', views.add_to_cart, name='add_to_cart'),
+    path('cart', views.view_cart, name='view_cart'),
+    path('remove/<int:pk>/', views.remove_from_cart, name='remove_from_cart')
 
     
     
