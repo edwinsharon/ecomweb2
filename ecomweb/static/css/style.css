@@ -13,7 +13,7 @@ color: white;
 }
 @media only screen and (max-width: 1399.8px) and (min-width:1200px){ 
     .head{
-        height:55px;
+        height:80px;
        display: grid;
        grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
     }
@@ -84,7 +84,7 @@ color: white;
 
     @media only screen and (min-width: 1400px) { 
         .head{
-            height:55px;
+            height:80px;
            display: grid;
            grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
         }
@@ -154,7 +154,7 @@ color: white;
             text-align: center;
         }
         .head{
-            height:55px;
+            height:80px;
             display: none;
            
         }
