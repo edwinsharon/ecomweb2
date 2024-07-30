@@ -184,7 +184,7 @@ color: white;
         }
         .products{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
             text-decoration: none;
         }
         .footermenu a{
@@ -258,7 +258,7 @@ color: white;
         }
         .products{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             text-decoration: none;
         }
         .footermenu a{
@@ -333,7 +333,7 @@ color: white;
         }
         .products{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
          
             text-decoration: none;
         }

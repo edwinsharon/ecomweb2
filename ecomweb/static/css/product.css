@@ -1,4 +1,4 @@
-.nav1 a{
+/* .nav1 a{
 text-decoration: none;
 color: white;
 
@@ -18,7 +18,7 @@ color: white;
 .imag{
     width: 600px;
     height: 600px;
-    object-fit: contain;
+    object-fit: fill;
 }
 .prodname {
     font-size:150px;
@@ -36,4 +36,327 @@ color: white;
     font-size: 20px;
     color: black;
     width: 400px;
+} */
+
+@media only screen and (max-width:575.98px){
+
+    .nav1 a{
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        }
+        .nav12 a{
+            text-decoration: none;
+            color: white;
+            width: 100%;
+            }
+        .nav1{
+            background-color:black;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .nav12{
+            background-color:black;
+          
+        }
+        .head{
+            height: 100px;
+            width: 100%;
+        }
+        .prod{
+            height: 100vh;
+            
+        }
+        .prod1{
+            display: grid;
+            grid-template-columns: 1fr ;
+            margin-left: 10%;
+
+        }
+        
+        .imag{
+            width: 200px;
+            height: 200px;
+            object-fit: fill;
+            padding-top: 12%;
+            ;
+        }
+        .prodname {
+            font-size:50px;
+            color: black;
+        }
+        .prodspeed{
+            font-size: 50px;
+            color:black;
+        }
+        .prodprize{
+            font-size: 35px;
+            color: black;
+        }
+        .detailsprod{
+            font-size: 20px;
+            color: black;
+            width: 400px;
+        }
+
+
+} 
+
+
+@media only screen and (min-width: 576px) and (max-width:767.98px){ 
+
+    .nav1 a{
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        }
+        .nav1{
+            background-color:black;
+        }
+        .head{
+            height: 100px;
+            width: 100%;
+        }
+        .prod{
+            height: 100vh;
+            
+        }
+        .prod1{
+            display: grid;
+            grid-template-columns: 1fr ;
+            
+
+        }
+        
+        .imag{
+            width: 600px;
+            height: 600px;
+            object-fit: fill;
+        }
+        .prodname {
+            font-size:150px;
+            color: black;
+        }
+        .prodspeed{
+            font-size: 50px;
+            color:black;
+        }
+        .prodprize{
+            font-size: 35px;
+            color: black;
+        }
+        .detailsprod{
+            font-size: 20px;
+            color: black;
+            width: 400px;
+        }
+
+ }
+
+
+@media only screen and (min-width: 768px) and (max-width:991.98px){ 
+       .nav1 a{
+        text-decoration: none;
+        color: white;
+        width: 100%;
+        }
+        .nav1{
+            background-color:black;
+        }
+        .head{
+            height: 100px;
+            width: 100%;
+        }
+        .prod{
+            height: 100vh;
+            
+        }
+        .prod1{
+            display: grid;
+            grid-template-columns: 1fr ;
+            
+
+        }
+        
+        .imag{
+            width: 600px;
+            height: 600px;
+            object-fit: fill;
+        }
+        .prodname {
+            font-size:150px;
+            color: black;
+        }
+        .prodspeed{
+            font-size: 50px;
+            color:black;
+        }
+        .prodprize{
+            font-size: 35px;
+            color: black;
+        }
+        .detailsprod{
+            font-size: 20px;
+            color: black;
+            width: 400px;
+        }
+ }
+
+
+@media only screen and (min-width: 992px) and (max-width:1199.98px){  
+
+    .nav1 a{
+        text-decoration: none;
+        color: white;
+        
+        
+        }
+        .nav1{
+            background-color:black;
+        }
+        .head{
+            height: 100px;
+            width: 100%;
+        }
+        .prod{
+            height: 100vh;
+            
+        }
+        .prod1{
+            display: grid;
+            grid-template-columns: 1fr ;
+            
+
+        }
+        
+        .imag{
+            width: 600px;
+            height: 600px;
+            object-fit: fill;
+        }
+        .prodname {
+            font-size:150px;
+            color: black;
+            margin-left: 10%;
+        }
+        .prodspeed{
+            font-size: 50px;
+            color:black;
+            margin-left: 10%;
+        }
+        .prodprize{
+            font-size: 35px;
+            color: black;
+            margin-left: 10%;
+        }
+        .detailsprod{
+            font-size: 20px;
+            color: black;
+            width: 400px;
+            margin-left: 10%;
+        }
+
 }
+
+
+@media only screen and (min-width: 1200px) and (max-width:1399.98px){  
+    .nav1 a{
+        text-decoration: none;
+        color: white;
+        
+        
+        }
+        .nav1{
+            background-color:black;
+        }
+        .head{
+            height: 100px;
+            width: 100%;
+        }
+        .prod{
+            height: 100vh;
+            
+        }
+        .prod1{
+            display: grid;
+            grid-template-columns: 1fr  1fr;
+            
+
+        }
+        
+        .imag{
+            width: 600px;
+            height: 600px;
+            object-fit: fill;
+        }
+        .prodname {
+            font-size:150px;
+            color: black;
+        }
+        .prodspeed{
+            font-size: 50px;
+            color:black;
+        }
+        .prodprize{
+            font-size: 35px;
+            color: black;
+        }
+        .detailsprod{
+            font-size: 20px;
+            color: black;
+            width: 400px;
+        }
+}
+
+
+@media (min-width: 1400px) { 
+    .nav1 a{
+        text-decoration: none;
+        color: white;
+        
+        
+        }
+        .nav12 a{
+            text-decoration: none;
+            color: white;
+            
+            
+            }
+        .nav1{
+            background-color:black;
+        }
+        .head{
+            height: 100px;
+            width: 100%;
+        }
+        .prod{
+            height: 100vh;
+            
+        }
+        .prod1{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .imag{
+            width: 600px;
+            height: 600px;
+            object-fit: fill;
+        }
+        .prodname {
+            font-size:150px;
+            color: black;
+        }
+        .prodspeed{
+            font-size: 50px;
+            color:black;
+        }
+        .prodprize{
+            font-size: 35px;
+            color: black;
+        }
+        .detailsprod{
+            font-size: 20px;
+            color: black;
+            width: 400px;
+        }
+ }
