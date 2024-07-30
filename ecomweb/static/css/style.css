@@ -15,7 +15,7 @@ color: white;
     .head{
         height:80px;
        display: grid;
-       grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr;
+       grid-template-columns: 4fr 1fr 1fr 1fr ;
     }
     .head a{
         
@@ -414,7 +414,8 @@ color: white;
         }
         .products{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr ;
+            grid-template-columns: 1fr 1fr 1fr ;
+            flex-wrap: wrap;
           
             
         }
