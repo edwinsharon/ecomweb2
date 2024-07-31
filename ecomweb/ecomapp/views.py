@@ -323,17 +323,19 @@ def searchpro(request):
 
 
 
+
 def add_to_cart(request, pk):
+   
     product = get_object_or_404(Product, id=pk)
     cart, created = Cart.objects.get_or_create(user=request.user)
-    CartItem.objects.get_or_create(cart=cart, product=product)
-    return redirect(reverse('productsdisplay', kwargs={'pk':product.pk}))
+    car=CartItem.objects.get_or_create(cart=cart, product=product)
+    return redirect(reverse('productsdisplay', kwargs={'pk': product.pk}))
 
 
 def view_cart(request):
-    cart = Cart.objects.get_or_create(user=request.user)
-    return render(request, 'cart.html', {'cart': cart})
-
+    cart, created = Cart.objects.get_or_create(user=request.user)
+    cart_items = CartItem.objects.filter(cart=cart)
+    return render(request, 'cart.html', {'cart_items': cart_items})
 def remove_from_cart(request, item_id):
     cart_item = get_object_or_404(CartItem, id=item_id)
     cart_item.delete()

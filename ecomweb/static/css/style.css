@@ -10,6 +10,11 @@
 .navitem a{
 text-decoration: none;
 color: white;
+flex-direction: column;
+justify-content: end;
+}
+.navitem{
+    display: flex;
 }
 @media only screen and (max-width: 1399.8px) and (min-width:1200px){ 
     .head{
@@ -391,6 +396,9 @@ color: white;
             display: none;
             text-decoration: none;
            color: white;
+        }
+        .head2{
+            display: block;
         }
         
         .head a:hover{
