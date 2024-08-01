@@ -93,28 +93,25 @@
         </div>
 
     </div>
-    <div class="nav row bg-black w-100 ms-2 rounded-bottom text-light shadow-lg head">
-        <div>
+    <div class="row bg-black ms-2 options1">
+        <div class="col-4 text-light">
             <h1><i>YULU CYCLES</i></h1>
         </div>
-        
+        <div class="col-3"></div>
+        <div class="col-3">
+            <form action="{% url 'searchpro' %}" method="post">
+                <input type="text" placeholder="search" class=" " name="searchitem">
+                <input type="submit" value="search" class="button2 ">
+            </form>
 
-        <form action="{% url 'searchpro' %}" method="post" class="ms-5">
-            {% csrf_token %}
-            <div class="row searchbar">
-                <input type="text" placeholder="search" class="w-75 col-6 " name="searchitem">
-                <input type="submit" value="search" class="button2 col-3 ">
-            </div>
-        </form>
-        <div class="navitem px-2 mt-2 ms-5 w-100">
+        </div>
+        <div class="col-2 options">
             <a href="" class="ms-3 ">About</a>
             <a href="" class="ms-2 ">Products</a>
             <a href="" class="ms-2">Contact us</a>
-
         </div>
-
-
-
+       
+        
 
     </div>
 

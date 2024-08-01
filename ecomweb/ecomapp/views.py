@@ -336,10 +336,12 @@ def view_cart(request):
     cart, created = Cart.objects.get_or_create(user=request.user)
     cart_items = CartItem.objects.filter(cart=cart)
     return render(request, 'cart.html', {'cart_items': cart_items})
-def remove_from_cart(request, item_id):
-    cart_item = get_object_or_404(CartItem, id=item_id)
-    cart_item.delete()
-    return redirect('view_cart')
+def remove_from_cart(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    cart = Cart(request)
+    del cart[pk]
+    cart.save()
+    return redirect('cart')
 
 
 

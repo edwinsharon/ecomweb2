@@ -16,11 +16,13 @@ justify-content: end;
 .navitem{
     display: flex;
 }
+.options a{
+text-decoration: none;
+color: white;
+}
 @media only screen and (max-width: 1399.8px) and (min-width:1200px){ 
     .head{
         height:80px;
-       display: grid;
-       grid-template-columns: 4fr 1fr 1fr 1fr ;
     }
     .head a{
         
