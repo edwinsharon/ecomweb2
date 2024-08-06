@@ -26,6 +26,9 @@
             margin: 4px 2px;
             cursor: pointer;
         }
+        .prodname{
+            font-size: 60px;
+        }
     </style>
 </head>
 <body>
@@ -51,16 +54,16 @@
     <div class="container">
         <h1 class="mt-5">CARTED PRODUCTS</h1>
         {% for item in cart_items %}
-        <div class="row container mb-5" >
+        <div class="row container mb-5 shadow-lg bg-dark text-light rounded" style="height: 200px;">
             <div class="col-4">
-                <img src="{{ item.product.image.url }}" alt="{{ item.product.productname }}" class="shadow-lg" style="height: 150px; width: 150px;  border: 2px solid black; padding: 5%; ">
+                <img src="{{ item.product.image.url }}" alt="{{ item.product.productname|upper }}" class="shadow-lg mt-4" style="height: 150px; width: 150px;">
             </div>
             <div class="col-4">
-                <h4>{{ item.product.productname }}</h4>
-                <h6>Rs:{{ item.product.prize }}</h6>
+                <h4 class="prodname">{{ item.product.productname }}</h4>
+                <h6 style="font-size: x-large;">Rs:{{ item.product.prize }}</h6>
             </div>
             <div class="col-4">
-                <a href="{% url 'remove_from_cart' item.product.id %}" class="button1">Delete</a>
+                <a href="{% url 'remove_from_cart' item.product.id %}" class="button1 mt-5">Delete</a>
             </div>
         </div>
         {% empty %}
