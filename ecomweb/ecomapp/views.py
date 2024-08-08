@@ -338,14 +338,9 @@ def view_cart(request):
     return render(request, 'cart.html', {'cart_items': cart_items})
 def remove_from_cart(request, pk):
     cart = get_object_or_404(Cart, user=request.user)  
-    item = get_object_or_404(Product, id=pk)  
-
-    try:
-        cart_item = CartItem.objects.get(cart=cart, item=item)
-        cart_item.delete()
-    except CartItem.DoesNotExist:
-        pass
-
-    return redirect('cart_view')
+    item = Product.objects.get(id=pk)  
+    cart_item = CartItem.objects.get(cart=cart, product=item)
+    cart_item.delete()
+    return redirect('view_cart')
 
 

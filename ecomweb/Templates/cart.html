@@ -1,4 +1,4 @@
-{% load static %}
+ {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +29,9 @@
         .prodname{
             font-size: 60px;
         }
+        .maindiv{
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
@@ -51,7 +54,7 @@
             {% endif %}
         </div>
     </div>
-    <div class="container">
+    <div class="container" style="margin-bottom: 400px;">
         <h1 class="mt-5">CARTED PRODUCTS</h1>
         {% for item in cart_items %}
         <div class="row container mb-5 shadow-lg bg-dark text-light rounded" style="height: 200px;">
@@ -63,11 +66,11 @@
                 <h6 style="font-size: x-large;">Rs:{{ item.product.prize }}</h6>
             </div>
             <div class="col-4">
-                <a href="{% url 'remove_from_cart' item.product.id %}" class="button1 mt-5">Delete</a>
+                <a href="../remove/{{item.product.id}}" class="button1 mt-5">Delete</a>
             </div>
         </div>
         {% empty %}
-        <p>Your cart is empty.</p>
+        <p style="margin-bottom: 500px;">Your cart is empty.</p>
         {% endfor %}
     </div>
 
